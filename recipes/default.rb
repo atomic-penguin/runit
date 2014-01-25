@@ -46,7 +46,7 @@ when 'rhel'
     # `rpmdevtools` is in EPEL repo in EL <= 5
     include_recipe 'yum-epel' if node['platform_version'].to_i == 5
 
-    packages = %w{rpm-build rpmdevtools tar gzip}
+    packages = %w{rpm-build rpmdevtools tar gzip which}
     packages.each do |p|
       package p
     end
